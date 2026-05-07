@@ -8,6 +8,7 @@ import { bcg } from "./bcg"
 import { ansoff } from "./ansoff"
 import { blueocean } from "./blueocean"
 import { stp } from "./stp"
+import { marketingmix } from "./marketingmix"
 
 const placeholder = (
   slug: string,
@@ -43,7 +44,7 @@ export const frameworks: Framework[] = [
   ansoff,
   blueocean,
   stp,
-  placeholder("marketingmix", 10, 2, "4P/7P 营销组合", "Marketing Mix", "营销活动的可控变量。"),
+  marketingmix,
   placeholder("pyramid", 11, 3, "金字塔原理", "Pyramid Principle", "结论先行的麦肯锡式表达。"),
   placeholder("mece", 12, 3, "MECE 原则", "Mutually Exclusive, Collectively Exhaustive", "结构化分解的基本功。"),
   placeholder("hypothesis", 13, 3, "假设驱动法", "Hypothesis-Driven Approach", "高效解决复杂问题。"),

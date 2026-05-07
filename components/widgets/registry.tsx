@@ -16,6 +16,8 @@ import { ErrcCanvas } from "./blueocean/ErrcCanvas"
 import { ErrcIntro } from "./blueocean/ErrcIntro"
 import { StpFlow } from "./stp/StpFlow"
 import { PerceptualMap } from "./stp/PerceptualMap"
+import { SevenPFlower } from "./marketingmix/SevenPFlower"
+import { MarketingMixConfig } from "./marketingmix/MarketingMixConfig"
 
 interface WidgetSet {
   visualization?: React.ReactNode
@@ -58,6 +60,10 @@ export const widgetRegistry: Record<string, WidgetSet> = {
   stp: {
     visualization: <StpFlow />,
     interactive: <PerceptualMap />,
+  },
+  marketingmix: {
+    visualization: <SevenPFlower />,
+    interactive: <MarketingMixConfig />,
   },
 }
 
