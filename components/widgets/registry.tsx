@@ -18,6 +18,18 @@ import { StpFlow } from "./stp/StpFlow"
 import { PerceptualMap } from "./stp/PerceptualMap"
 import { SevenPFlower } from "./marketingmix/SevenPFlower"
 import { MarketingMixConfig } from "./marketingmix/MarketingMixConfig"
+import { PyramidDiagram } from "./pyramid/PyramidDiagram"
+import { PyramidBuilder } from "./pyramid/PyramidBuilder"
+import { MeceTree } from "./mece/MeceTree"
+import { MeceJudgeQuiz } from "./mece/MeceJudgeQuiz"
+import { HypothesisCycle } from "./hypothesis/HypothesisCycle"
+import { HypothesisCase } from "./hypothesis/HypothesisCase"
+import { ProfitTree } from "./issuetree/ProfitTree"
+import { ProfitTreeIntro } from "./issuetree/ProfitTreeIntro"
+import { ParetoChart } from "./pareto/ParetoChart"
+import { ParetoIntro } from "./pareto/ParetoIntro"
+import { SevenSNetwork } from "./sevens/SevenSNetwork"
+import { SevenSIntro } from "./sevens/SevenSIntro"
 
 interface WidgetSet {
   visualization?: React.ReactNode
@@ -64,6 +76,30 @@ export const widgetRegistry: Record<string, WidgetSet> = {
   marketingmix: {
     visualization: <SevenPFlower />,
     interactive: <MarketingMixConfig />,
+  },
+  pyramid: {
+    visualization: <PyramidDiagram />,
+    interactive: <PyramidBuilder />,
+  },
+  mece: {
+    visualization: <MeceTree />,
+    interactive: <MeceJudgeQuiz />,
+  },
+  hypothesis: {
+    visualization: <HypothesisCycle />,
+    interactive: <HypothesisCase />,
+  },
+  issuetree: {
+    visualization: <ProfitTreeIntro />,
+    interactive: <ProfitTree />,
+  },
+  pareto: {
+    visualization: <ParetoIntro />,
+    interactive: <ParetoChart />,
+  },
+  sevens: {
+    visualization: <SevenSIntro />,
+    interactive: <SevenSNetwork />,
   },
 }
 

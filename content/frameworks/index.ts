@@ -9,6 +9,12 @@ import { ansoff } from "./ansoff"
 import { blueocean } from "./blueocean"
 import { stp } from "./stp"
 import { marketingmix } from "./marketingmix"
+import { pyramid } from "./pyramid"
+import { mece } from "./mece"
+import { hypothesis } from "./hypothesis"
+import { issuetree } from "./issuetree"
+import { pareto } from "./pareto"
+import { sevens } from "./sevens"
 
 const placeholder = (
   slug: string,
@@ -45,12 +51,12 @@ export const frameworks: Framework[] = [
   blueocean,
   stp,
   marketingmix,
-  placeholder("pyramid", 11, 3, "金字塔原理", "Pyramid Principle", "结论先行的麦肯锡式表达。"),
-  placeholder("mece", 12, 3, "MECE 原则", "Mutually Exclusive, Collectively Exhaustive", "结构化分解的基本功。"),
-  placeholder("hypothesis", 13, 3, "假设驱动法", "Hypothesis-Driven Approach", "高效解决复杂问题。"),
-  placeholder("issuetree", 14, 3, "问题树", "Issue Tree", "把大问题切到能直接分析。"),
-  placeholder("pareto", 15, 3, "80/20 法则", "Pareto Principle", "抓住关键的少数。"),
-  placeholder("sevens", 16, 3, "麦肯锡 7S 模型", "McKinsey 7S Framework", "组织变革的七个一致要素。"),
+  pyramid,
+  mece,
+  hypothesis,
+  issuetree,
+  pareto,
+  sevens,
   placeholder("dupont", 17, 4, "杜邦分析法", "DuPont Analysis", "ROE 三层分解看盈利驱动。"),
   placeholder("breakeven", 18, 4, "盈亏平衡分析", "Break-Even Analysis", "找出收支相当的销售点。"),
   placeholder("npv", 19, 4, "NPV/IRR 投资决策", "Investment Decision Methods", "未来现金流贴现做决策。"),
