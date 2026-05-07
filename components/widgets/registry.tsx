@@ -8,6 +8,8 @@ import { ValueChainDiagram } from "./valuechain/ValueChainDiagram"
 import { ValueChainIntro } from "./valuechain/ValueChainIntro"
 import { VrioFlow } from "./vrio/VrioFlow"
 import { VrioIntro } from "./vrio/VrioIntro"
+import { BcgBubbleChart } from "./bcg/BcgBubbleChart"
+import { BcgIntro } from "./bcg/BcgIntro"
 
 interface WidgetSet {
   visualization?: React.ReactNode
@@ -34,6 +36,10 @@ export const widgetRegistry: Record<string, WidgetSet> = {
   vrio: {
     visualization: <VrioIntro />,
     interactive: <VrioFlow />,
+  },
+  bcg: {
+    visualization: <BcgIntro />,
+    interactive: <BcgBubbleChart />,
   },
 }
 
