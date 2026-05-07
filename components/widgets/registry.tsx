@@ -2,6 +2,8 @@ import { SwotMatrix } from "./swot/SwotMatrix"
 import { SwotDragQuiz } from "./swot/SwotDragQuiz"
 import { PestelRadar } from "./pestel/PestelRadar"
 import { PestelIntro } from "./pestel/PestelIntro"
+import { FiveForcesDiagram } from "./porter5/FiveForcesDiagram"
+import { Porter5Intro } from "./porter5/Porter5Intro"
 
 interface WidgetSet {
   visualization?: React.ReactNode
@@ -16,6 +18,10 @@ export const widgetRegistry: Record<string, WidgetSet> = {
   pestel: {
     visualization: <PestelIntro />,
     interactive: <PestelRadar />,
+  },
+  porter5: {
+    visualization: <Porter5Intro />,
+    interactive: <FiveForcesDiagram />,
   },
 }
 
