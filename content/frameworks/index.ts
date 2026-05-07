@@ -1,4 +1,5 @@
 import type { Framework, ChapterId } from "../types"
+import { swot } from "./swot"
 
 const placeholder = (
   slug: string,
@@ -25,7 +26,7 @@ const placeholder = (
 })
 
 export const frameworks: Framework[] = [
-  placeholder("swot", 1, 1, "SWOT 分析", "SWOT Analysis", "把企业的内外部环境一图看清。"),
+  swot,
   placeholder("pestel", 2, 1, "PESTEL 分析", "PESTEL Analysis", "六维扫描宏观环境。"),
   placeholder("porter5", 3, 1, "波特五力模型", "Porter's Five Forces", "判断行业值不值得进。"),
   placeholder("valuechain", 4, 1, "波特价值链", "Porter's Value Chain", "企业活动哪儿创造价值。"),
