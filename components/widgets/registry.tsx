@@ -6,6 +6,8 @@ import { FiveForcesDiagram } from "./porter5/FiveForcesDiagram"
 import { Porter5Intro } from "./porter5/Porter5Intro"
 import { ValueChainDiagram } from "./valuechain/ValueChainDiagram"
 import { ValueChainIntro } from "./valuechain/ValueChainIntro"
+import { VrioFlow } from "./vrio/VrioFlow"
+import { VrioIntro } from "./vrio/VrioIntro"
 
 interface WidgetSet {
   visualization?: React.ReactNode
@@ -28,6 +30,10 @@ export const widgetRegistry: Record<string, WidgetSet> = {
   valuechain: {
     visualization: <ValueChainIntro />,
     interactive: <ValueChainDiagram />,
+  },
+  vrio: {
+    visualization: <VrioIntro />,
+    interactive: <VrioFlow />,
   },
 }
 
