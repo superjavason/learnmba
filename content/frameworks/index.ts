@@ -18,6 +18,9 @@ import { sevens } from "./sevens"
 import { dupont } from "./dupont"
 import { breakeven } from "./breakeven"
 import { npvFramework } from "./npv"
+import { bsc } from "./bsc"
+import { kotter } from "./kotter"
+import { raci } from "./raci"
 
 const placeholder = (
   slug: string,
@@ -63,9 +66,9 @@ export const frameworks: Framework[] = [
   dupont,
   breakeven,
   npvFramework,
-  placeholder("bsc", 20, 5, "平衡计分卡", "Balanced Scorecard", "四维度平衡组织绩效。"),
-  placeholder("kotter", 21, 5, "科特变革八步法", "Kotter's 8 Steps of Change", "组织变革的八步路径。"),
-  placeholder("raci", 22, 5, "RACI 矩阵", "Responsibility Assignment Matrix", "项目角色与责任分配。"),
+  bsc,
+  kotter,
+  raci,
   placeholder("canvas", 23, 6, "商业模式画布", "Business Model Canvas", "九块画清商业模式。"),
   placeholder("disruptive", 24, 6, "颠覆性创新", "Disruptive Innovation", "低端切入逆袭主流。"),
   placeholder("designthinking", 25, 6, "设计思维", "Design Thinking", "以用户为中心的创新流程。"),

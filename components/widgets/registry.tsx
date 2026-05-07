@@ -36,6 +36,12 @@ import { BreakEvenChart } from "./breakeven/BreakEvenChart"
 import { BreakEvenIntro } from "./breakeven/BreakEvenIntro"
 import { NpvAnalysis } from "./npv/NpvAnalysis"
 import { NpvIntro } from "./npv/NpvIntro"
+import { BalancedScorecard } from "./bsc/BalancedScorecard"
+import { BscDragQuiz } from "./bsc/BscDragQuiz"
+import { KotterFlow } from "./kotter/KotterFlow"
+import { KotterCase } from "./kotter/KotterCase"
+import { RaciMatrix } from "./raci/RaciMatrix"
+import { RaciIntro } from "./raci/RaciIntro"
 
 interface WidgetSet {
   visualization?: React.ReactNode
@@ -118,6 +124,18 @@ export const widgetRegistry: Record<string, WidgetSet> = {
   npv: {
     visualization: <NpvIntro />,
     interactive: <NpvAnalysis />,
+  },
+  bsc: {
+    visualization: <BalancedScorecard />,
+    interactive: <BscDragQuiz />,
+  },
+  kotter: {
+    visualization: <KotterFlow />,
+    interactive: <KotterCase />,
+  },
+  raci: {
+    visualization: <RaciIntro />,
+    interactive: <RaciMatrix />,
   },
 }
 
