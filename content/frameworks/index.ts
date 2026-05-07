@@ -5,6 +5,7 @@ import { porter5 } from "./porter5"
 import { valuechain } from "./valuechain"
 import { vrio } from "./vrio"
 import { bcg } from "./bcg"
+import { ansoff } from "./ansoff"
 
 const placeholder = (
   slug: string,
@@ -37,7 +38,7 @@ export const frameworks: Framework[] = [
   valuechain,
   vrio,
   bcg,
-  placeholder("ansoff", 7, 2, "安索夫矩阵", "Ansoff Matrix", "四种增长战略与风险。"),
+  ansoff,
   placeholder("blueocean", 8, 2, "蓝海战略", "Blue Ocean Strategy", "跳出红海、创造新需求。"),
   placeholder("stp", 9, 2, "STP 分析", "Segmentation, Targeting, Positioning", "细分、目标、定位三步法。"),
   placeholder("marketingmix", 10, 2, "4P/7P 营销组合", "Marketing Mix", "营销活动的可控变量。"),

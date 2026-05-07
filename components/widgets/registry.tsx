@@ -10,6 +10,8 @@ import { VrioFlow } from "./vrio/VrioFlow"
 import { VrioIntro } from "./vrio/VrioIntro"
 import { BcgBubbleChart } from "./bcg/BcgBubbleChart"
 import { BcgIntro } from "./bcg/BcgIntro"
+import { AnsoffMatrix } from "./ansoff/AnsoffMatrix"
+import { AnsoffScenarioQuiz } from "./ansoff/AnsoffScenarioQuiz"
 
 interface WidgetSet {
   visualization?: React.ReactNode
@@ -40,6 +42,10 @@ export const widgetRegistry: Record<string, WidgetSet> = {
   bcg: {
     visualization: <BcgIntro />,
     interactive: <BcgBubbleChart />,
+  },
+  ansoff: {
+    visualization: <AnsoffMatrix />,
+    interactive: <AnsoffScenarioQuiz />,
   },
 }
 
