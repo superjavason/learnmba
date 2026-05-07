@@ -30,6 +30,12 @@ import { ParetoChart } from "./pareto/ParetoChart"
 import { ParetoIntro } from "./pareto/ParetoIntro"
 import { SevenSNetwork } from "./sevens/SevenSNetwork"
 import { SevenSIntro } from "./sevens/SevenSIntro"
+import { DupontTree } from "./dupont/DupontTree"
+import { DupontIntro } from "./dupont/DupontIntro"
+import { BreakEvenChart } from "./breakeven/BreakEvenChart"
+import { BreakEvenIntro } from "./breakeven/BreakEvenIntro"
+import { NpvAnalysis } from "./npv/NpvAnalysis"
+import { NpvIntro } from "./npv/NpvIntro"
 
 interface WidgetSet {
   visualization?: React.ReactNode
@@ -100,6 +106,18 @@ export const widgetRegistry: Record<string, WidgetSet> = {
   sevens: {
     visualization: <SevenSIntro />,
     interactive: <SevenSNetwork />,
+  },
+  dupont: {
+    visualization: <DupontIntro />,
+    interactive: <DupontTree />,
+  },
+  breakeven: {
+    visualization: <BreakEvenIntro />,
+    interactive: <BreakEvenChart />,
+  },
+  npv: {
+    visualization: <NpvIntro />,
+    interactive: <NpvAnalysis />,
   },
 }
 

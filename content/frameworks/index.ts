@@ -15,6 +15,9 @@ import { hypothesis } from "./hypothesis"
 import { issuetree } from "./issuetree"
 import { pareto } from "./pareto"
 import { sevens } from "./sevens"
+import { dupont } from "./dupont"
+import { breakeven } from "./breakeven"
+import { npvFramework } from "./npv"
 
 const placeholder = (
   slug: string,
@@ -57,9 +60,9 @@ export const frameworks: Framework[] = [
   issuetree,
   pareto,
   sevens,
-  placeholder("dupont", 17, 4, "杜邦分析法", "DuPont Analysis", "ROE 三层分解看盈利驱动。"),
-  placeholder("breakeven", 18, 4, "盈亏平衡分析", "Break-Even Analysis", "找出收支相当的销售点。"),
-  placeholder("npv", 19, 4, "NPV/IRR 投资决策", "Investment Decision Methods", "未来现金流贴现做决策。"),
+  dupont,
+  breakeven,
+  npvFramework,
   placeholder("bsc", 20, 5, "平衡计分卡", "Balanced Scorecard", "四维度平衡组织绩效。"),
   placeholder("kotter", 21, 5, "科特变革八步法", "Kotter's 8 Steps of Change", "组织变革的八步路径。"),
   placeholder("raci", 22, 5, "RACI 矩阵", "Responsibility Assignment Matrix", "项目角色与责任分配。"),
