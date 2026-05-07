@@ -4,6 +4,8 @@ import { PestelRadar } from "./pestel/PestelRadar"
 import { PestelIntro } from "./pestel/PestelIntro"
 import { FiveForcesDiagram } from "./porter5/FiveForcesDiagram"
 import { Porter5Intro } from "./porter5/Porter5Intro"
+import { ValueChainDiagram } from "./valuechain/ValueChainDiagram"
+import { ValueChainIntro } from "./valuechain/ValueChainIntro"
 
 interface WidgetSet {
   visualization?: React.ReactNode
@@ -22,6 +24,10 @@ export const widgetRegistry: Record<string, WidgetSet> = {
   porter5: {
     visualization: <Porter5Intro />,
     interactive: <FiveForcesDiagram />,
+  },
+  valuechain: {
+    visualization: <ValueChainIntro />,
+    interactive: <ValueChainDiagram />,
   },
 }
 
