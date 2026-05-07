@@ -12,6 +12,8 @@ import { BcgBubbleChart } from "./bcg/BcgBubbleChart"
 import { BcgIntro } from "./bcg/BcgIntro"
 import { AnsoffMatrix } from "./ansoff/AnsoffMatrix"
 import { AnsoffScenarioQuiz } from "./ansoff/AnsoffScenarioQuiz"
+import { ErrcCanvas } from "./blueocean/ErrcCanvas"
+import { ErrcIntro } from "./blueocean/ErrcIntro"
 
 interface WidgetSet {
   visualization?: React.ReactNode
@@ -46,6 +48,10 @@ export const widgetRegistry: Record<string, WidgetSet> = {
   ansoff: {
     visualization: <AnsoffMatrix />,
     interactive: <AnsoffScenarioQuiz />,
+  },
+  blueocean: {
+    visualization: <ErrcIntro />,
+    interactive: <ErrcCanvas />,
   },
 }
 
