@@ -7,6 +7,7 @@ import { vrio } from "./vrio"
 import { bcg } from "./bcg"
 import { ansoff } from "./ansoff"
 import { blueocean } from "./blueocean"
+import { stp } from "./stp"
 
 const placeholder = (
   slug: string,
@@ -41,7 +42,7 @@ export const frameworks: Framework[] = [
   bcg,
   ansoff,
   blueocean,
-  placeholder("stp", 9, 2, "STP 分析", "Segmentation, Targeting, Positioning", "细分、目标、定位三步法。"),
+  stp,
   placeholder("marketingmix", 10, 2, "4P/7P 营销组合", "Marketing Mix", "营销活动的可控变量。"),
   placeholder("pyramid", 11, 3, "金字塔原理", "Pyramid Principle", "结论先行的麦肯锡式表达。"),
   placeholder("mece", 12, 3, "MECE 原则", "Mutually Exclusive, Collectively Exhaustive", "结构化分解的基本功。"),

@@ -14,6 +14,8 @@ import { AnsoffMatrix } from "./ansoff/AnsoffMatrix"
 import { AnsoffScenarioQuiz } from "./ansoff/AnsoffScenarioQuiz"
 import { ErrcCanvas } from "./blueocean/ErrcCanvas"
 import { ErrcIntro } from "./blueocean/ErrcIntro"
+import { StpFlow } from "./stp/StpFlow"
+import { PerceptualMap } from "./stp/PerceptualMap"
 
 interface WidgetSet {
   visualization?: React.ReactNode
@@ -52,6 +54,10 @@ export const widgetRegistry: Record<string, WidgetSet> = {
   blueocean: {
     visualization: <ErrcIntro />,
     interactive: <ErrcCanvas />,
+  },
+  stp: {
+    visualization: <StpFlow />,
+    interactive: <PerceptualMap />,
   },
 }
 
