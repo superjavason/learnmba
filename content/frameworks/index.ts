@@ -21,30 +21,9 @@ import { npvFramework } from "./npv"
 import { bsc } from "./bsc"
 import { kotter } from "./kotter"
 import { raci } from "./raci"
-
-const placeholder = (
-  slug: string,
-  n: number,
-  ch: ChapterId,
-  zh: string,
-  en: string,
-  tagline = "",
-): Framework => ({
-  slug,
-  number: n,
-  chapter: ch,
-  nameZh: zh,
-  nameEn: en,
-  difficulty: "beginner",
-  estimatedMinutes: 8,
-  tagline,
-  definition: { tldr: "", details: [] },
-  concepts: [],
-  caseStudy: { title: "", scenario: "", analysis: [], takeaway: "" },
-  quiz: [],
-  tips: [],
-  pitfalls: [],
-})
+import { canvas } from "./canvas"
+import { disruptive } from "./disruptive"
+import { designthinking } from "./designthinking"
 
 export const frameworks: Framework[] = [
   swot,
@@ -69,9 +48,9 @@ export const frameworks: Framework[] = [
   bsc,
   kotter,
   raci,
-  placeholder("canvas", 23, 6, "商业模式画布", "Business Model Canvas", "九块画清商业模式。"),
-  placeholder("disruptive", 24, 6, "颠覆性创新", "Disruptive Innovation", "低端切入逆袭主流。"),
-  placeholder("designthinking", 25, 6, "设计思维", "Design Thinking", "以用户为中心的创新流程。"),
+  canvas,
+  disruptive,
+  designthinking,
 ]
 
 export function getFramework(slug: string): Framework | undefined {

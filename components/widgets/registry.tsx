@@ -42,6 +42,12 @@ import { KotterFlow } from "./kotter/KotterFlow"
 import { KotterCase } from "./kotter/KotterCase"
 import { RaciMatrix } from "./raci/RaciMatrix"
 import { RaciIntro } from "./raci/RaciIntro"
+import { BusinessModelCanvas } from "./canvas/BusinessModelCanvas"
+import { CanvasFiller } from "./canvas/CanvasFiller"
+import { DisruptiveTrajectory } from "./disruptive/DisruptiveTrajectory"
+import { DisruptiveIntro } from "./disruptive/DisruptiveIntro"
+import { DesignThinkingFlow } from "./designthinking/DesignThinkingFlow"
+import { DesignThinkingCase } from "./designthinking/DesignThinkingCase"
 
 interface WidgetSet {
   visualization?: React.ReactNode
@@ -136,6 +142,18 @@ export const widgetRegistry: Record<string, WidgetSet> = {
   raci: {
     visualization: <RaciIntro />,
     interactive: <RaciMatrix />,
+  },
+  canvas: {
+    visualization: <BusinessModelCanvas />,
+    interactive: <CanvasFiller />,
+  },
+  disruptive: {
+    visualization: <DisruptiveIntro />,
+    interactive: <DisruptiveTrajectory />,
+  },
+  designthinking: {
+    visualization: <DesignThinkingFlow />,
+    interactive: <DesignThinkingCase />,
   },
 }
 
