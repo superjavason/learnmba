@@ -48,6 +48,14 @@ import { DisruptiveTrajectory } from "./disruptive/DisruptiveTrajectory"
 import { DisruptiveIntro } from "./disruptive/DisruptiveIntro"
 import { DesignThinkingFlow } from "./designthinking/DesignThinkingFlow"
 import { DesignThinkingCase } from "./designthinking/DesignThinkingCase"
+import { ScqaFlow } from "./scqa/ScqaFlow"
+import { ScqaBuilder } from "./scqa/ScqaBuilder"
+import { PrepLoop } from "./prep/PrepLoop"
+import { PrepSort } from "./prep/PrepSort"
+import { StarFlow } from "./star/StarFlow"
+import { StarCase } from "./star/StarCase"
+import { FiveW2HGrid } from "./fivew2h/FiveW2HGrid"
+import { FiveW2HMatch } from "./fivew2h/FiveW2HMatch"
 
 interface WidgetSet {
   visualization?: React.ReactNode
@@ -154,6 +162,22 @@ export const widgetRegistry: Record<string, WidgetSet> = {
   designthinking: {
     visualization: <DesignThinkingFlow />,
     interactive: <DesignThinkingCase />,
+  },
+  scqa: {
+    visualization: <ScqaFlow />,
+    interactive: <ScqaBuilder />,
+  },
+  prep: {
+    visualization: <PrepLoop />,
+    interactive: <PrepSort />,
+  },
+  star: {
+    visualization: <StarFlow />,
+    interactive: <StarCase />,
+  },
+  fivew2h: {
+    visualization: <FiveW2HGrid />,
+    interactive: <FiveW2HMatch />,
   },
 }
 
