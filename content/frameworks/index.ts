@@ -24,6 +24,10 @@ import { raci } from "./raci"
 import { canvas } from "./canvas"
 import { disruptive } from "./disruptive"
 import { designthinking } from "./designthinking"
+import { scqa } from "./scqa"
+import { prep } from "./prep"
+import { star } from "./star"
+import { fivew2h } from "./fivew2h"
 
 export const frameworks: Framework[] = [
   swot,
@@ -51,6 +55,10 @@ export const frameworks: Framework[] = [
   canvas,
   disruptive,
   designthinking,
+  scqa,
+  prep,
+  star,
+  fivew2h,
 ]
 
 export function getFramework(slug: string): Framework | undefined {
