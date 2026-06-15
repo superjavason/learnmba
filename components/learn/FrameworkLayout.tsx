@@ -6,6 +6,7 @@ import { useLearning } from "@/lib/store"
 import { Badge } from "@/components/ui/badge"
 import { Clock, GraduationCap } from "lucide-react"
 import { getChapter, CHAPTER_NUMERAL } from "@/content/chapters"
+import { frameworks } from "@/content/frameworks"
 import { DefinitionBlock } from "./DefinitionBlock"
 import { TipsBlock } from "./TipsBlock"
 import { CaseStudyBlock } from "./CaseStudyBlock"
@@ -46,7 +47,7 @@ export function FrameworkLayout({
           </span>
           <span aria-hidden>·</span>
           <span className="tabular-nums">
-            框架 {String(framework.number).padStart(2, "0")}/25
+            框架 {String(framework.number).padStart(2, "0")}/{frameworks.length}
           </span>
         </div>
         <h1 className="font-serif text-4xl lg:text-5xl font-bold leading-tight">

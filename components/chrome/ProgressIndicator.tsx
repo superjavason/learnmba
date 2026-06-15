@@ -2,8 +2,9 @@
 
 import { useLearning } from "@/lib/store"
 import { Progress } from "@/components/ui/progress"
+import { frameworks } from "@/content/frameworks"
 
-const TOTAL = 25
+const TOTAL = frameworks.length
 
 export function ProgressIndicator() {
   const visited = useLearning((s) => s.visited.length)

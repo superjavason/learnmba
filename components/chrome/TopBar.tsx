@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { ChapterNav } from "./ChapterNav"
 import { ProgressIndicator } from "./ProgressIndicator"
+import { frameworks } from "@/content/frameworks"
 
 export function TopBar() {
   return (
@@ -15,7 +16,7 @@ export function TopBar() {
         >
           MBA 经典框架
           <span className="ml-2 text-[11px] font-sans font-normal text-muted-foreground hidden sm:inline">
-            25 Frameworks
+            {frameworks.length} Frameworks
           </span>
         </Link>
         <div className="flex-1" />

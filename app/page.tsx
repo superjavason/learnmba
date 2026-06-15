@@ -16,6 +16,12 @@ export default function HomePage() {
   const visitedSet = new Set(visited)
   const completedSet = new Set(completed)
 
+  // 统计数据全部从框架数据派生——增删框架时自动同步
+  const frameworkCount = frameworks.length
+  const quizCount = frameworks.reduce((n, f) => n + f.quiz.length, 0)
+  // 练习与测验 = 每个框架 1 个互动练习 + 全部测验题，向下取整到十位再加「+」
+  const exerciseLabel = `${Math.floor((frameworkCount + quizCount) / 10) * 10}+`
+
   return (
     <>
       <TopBar />
@@ -28,7 +34,7 @@ export default function HomePage() {
                 MBA & Consulting · 中文交互式课件
               </div>
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                25 个 MBA 经典分析框架，
+                {frameworkCount} 个 MBA 经典分析框架，
                 <br className="hidden sm:block" />
                 边学边练，一次掌握。
               </h1>
@@ -42,14 +48,14 @@ export default function HomePage() {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link href="#frameworks">浏览全部 25 个</Link>
+                  <Link href="#frameworks">浏览全部 {frameworkCount} 个</Link>
                 </Button>
               </div>
 
               <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border max-w-md">
-                <Stat icon={BookOpen} label="经典框架" value="25" />
-                <Stat icon={Target} label="互动 Widget" value="25" />
-                <Stat icon={Zap} label="练习与测验" value="100+" />
+                <Stat icon={BookOpen} label="经典框架" value={String(frameworkCount)} />
+                <Stat icon={Target} label="互动 Widget" value={String(frameworkCount)} />
+                <Stat icon={Zap} label="练习与测验" value={exerciseLabel} />
               </div>
             </div>
           </div>
@@ -60,7 +66,7 @@ export default function HomePage() {
           <div className="flex items-baseline justify-between mb-8 flex-wrap gap-2">
             <h2 className="font-serif text-3xl font-bold">六大章节</h2>
             <span className="text-sm text-muted-foreground tabular-nums">
-              已学 {visited.length} / 25 · 已通过 {completed.length}
+              已学 {visited.length} / {frameworkCount} · 已通过 {completed.length}
             </span>
           </div>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -102,7 +108,7 @@ export default function HomePage() {
 
         {/* FRAMEWORK GRID */}
         <section id="frameworks" className="mx-auto max-w-screen-xl px-4 pb-24 scroll-mt-16">
-          <h2 className="font-serif text-3xl font-bold mb-2">全部 25 个框架</h2>
+          <h2 className="font-serif text-3xl font-bold mb-2">全部 {frameworkCount} 个框架</h2>
           <p className="text-sm text-muted-foreground mb-8">
             点击进入任何一个开始学习。已浏览的标记为深色，已通过测验的标记金色 ✓。
           </p>
