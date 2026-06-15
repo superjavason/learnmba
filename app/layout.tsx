@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Noto_Sans_SC, Noto_Serif_SC, Geist_Mono } from "next/font/google"
 import "./globals.css"
 import { cn } from "@/lib/utils"
+import { frameworks } from "@/content/frameworks"
 
 const notoSans = Noto_Sans_SC({
   subsets: ["latin"],
@@ -22,7 +23,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "MBA 经典分析框架 · 交互式课件",
-  description: "25 个 MBA & 咨询经典分析框架的交互式学习平台",
+  description: `${frameworks.length} 个 MBA & 咨询经典分析框架的交互式学习平台`,
 }
 
 export default function RootLayout({
